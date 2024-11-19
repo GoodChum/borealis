@@ -156,8 +156,6 @@ void Application::createWindow(std::string windowTitle)
     Application::registerBuiltInXMLViews();
 
     Application::getWindowCreationDoneEvent()->fire();
-
-    Application::backgroundColor = Application::getTheme().getColor("brls/clear");
 }
 
 bool Application::mainLoop()
@@ -656,7 +654,7 @@ void Application::frame()
 
     // Begin frame and clear
     videoContext->beginFrame();
-    videoContext->clear(backgroundColor);
+    videoContext->clear(Application::getTheme().getColor("brls/clear"));
     float scaleFactor = videoContext->getScaleFactor();
 
     nvgBeginFrame(frameContext.vg, Application::windowWidth, Application::windowHeight, scaleFactor);

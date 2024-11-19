@@ -337,7 +337,6 @@ class Application
     inline static bool muteSounds            = false;
 
     inline static std::string commonFooter;
-    inline static NVGcolor backgroundColor{};
 
     inline static bool globalQuitEnabled                = false;
     inline static ActionIdentifier gloablQuitIdentifier = ACTION_NONE;
